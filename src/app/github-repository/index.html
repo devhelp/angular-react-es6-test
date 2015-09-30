@@ -1,0 +1,23 @@
+<navbar creationDate="main.creationDate"></navbar>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-2 col-md-2">
+    </div>
+    <div class="col-md-10">
+      <div class="row">
+        <div class="col-md-5">
+          <div class="list-group">
+            <h3>Github repositories</h3>
+            <ul class="list-group">
+              <li ng-repeat="repository in vm.repositories" class="list-group-item">
+                <input ng-change="vm.selectRepository(repository.id, checked)" bs-switch type="checkbox" checklist-model="vm.syncedRepositories" checklist-value="repository.id">
+                 {{ repository.owner }} / {{ repository.name }}
+                <span class="badge">{{ repository.language }}</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

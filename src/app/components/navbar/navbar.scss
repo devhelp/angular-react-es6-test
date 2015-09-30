@@ -1,0 +1,33 @@
+$gradient-from: #00838F;
+$gradient-to: #00ACC1;
+$navbar-color: #FFFFFF;
+
+.navbar-text {
+  color: white;
+}
+
+.navbar {
+
+  text-shadow: 0 1px 0 rgba(0, 0, 0, .1);
+  background-color: $gradient-to;
+  background-image: -webkit-gradient(linear, left top, left bottom, from($gradient-from), to($gradient-to));
+  background-image: -webkit-linear-gradient(top, $gradient-from 0, $gradient-to 100%);
+  background-image: -o-linear-gradient(top, $gradient-from 0, $gradient-to 100%);
+  background-image: linear-gradient(to bottom, $gradient-from 0, $gradient-to 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$gradient-from', endColorstr='$gradient-to', GradientType=0);
+  background-repeat: repeat-x;
+
+  .navbar-nav > li > a {
+    color: $navbar-color;
+    cursor: pointer;
+  }
+
+  .navbar-brand {
+    color: $navbar-color;
+  }
+
+}
+
+.navbar-inverse {
+  border: none;
+}
